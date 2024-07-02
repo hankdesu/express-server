@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Deploy to EC2
           command: |
-            ssh -o StrictHostKeyChecking=no ubuntu@$AWS_IP << 'EOF'
+            ssh -o StrictHostKeyChecking=no ubuntu@$AWS_IP \<< 'EOF'
             docker pull p30205/express-server
             docker stop express-server || true
             docker rm express-server || true
