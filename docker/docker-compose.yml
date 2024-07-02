@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: ./node
+      dockerfile: dockerfile
+    environment:
+      - NODE_ENV
+      - MYSQL_DATABASE_USERNAME
+    command: sh -c "npm install && npm start"
+    working_dir: /express-server
+    ports:
+      - 127.0.0.1:3000:3000
+    volumes:
+      - ../:/express-server
+    # env_file:
+    #   - ./node/.env
