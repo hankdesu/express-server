@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: node:lts-slim
+      - image: circleci/node:20
     steps:
       - checkout
       - setup_remote_docker:
