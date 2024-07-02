@@ -35,7 +35,7 @@ jobs:
             docker pull p30205/express-server
             docker stop express-server || true
             docker rm express-server || true
-            docker run -d --name express-server -p 3000:3000 p30205/express-server
+            docker run -d --name express-server -p 3000:3000 p30205/express-server:0.0.5
             EOF
 
 workflows:
