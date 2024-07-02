@@ -1,5 +1,7 @@
 FROM node:lts-slim
 
+ENV NODE_OPTIONS="--max-old-space-size=8192"
+
 RUN mkdir -p express-server
 COPY ./package.json /express-server/
 COPY ./src /express-server/src
